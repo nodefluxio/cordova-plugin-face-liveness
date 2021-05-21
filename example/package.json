@@ -1,0 +1,29 @@
+{
+  "name": "nodeflux.cordova.faceliveness",
+  "displayName": "Nodeflux Face Liveness",
+  "version": "0.1.0",
+  "description": "A sample integration Nodeflux SDK Face liveness with Cordova.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Billy Sutomo",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.1.0",
+    "cordova-plugin-face-liveness": "git+https://github.com/nodefluxio/cordova-plugin-face-liveness.git#plugin-development",
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-face-liveness": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
