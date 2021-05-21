@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-face-liveness" version="0.1.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>FaceLiveness</name>
+	<js-module name="FaceLiveness" src="www/faceLiveness.js">
+		<clobbers target="cordova.plugins.FaceLiveness" />
+	</js-module>
+
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="FaceLiveness">
+				<param name="android-package" value="com.face.liveness.FaceLiveness" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/FaceLiveness.java" target-dir="src/com/face/liveness" />
+		<framework src="src/android/faceLiveness.gradle" custom="true" type="gradleReference" />
+      	<resource-file src="libs/sdk-liveness-0.3.2.aar" target="libs/sdk-liveness-0.3.2.aar" />
+	</platform>
+</plugin>
