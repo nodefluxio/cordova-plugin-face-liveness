@@ -48,8 +48,8 @@ public class FaceLiveness extends CordovaPlugin {
                     }
 
                     @Override
-                    public void onError(String s) {
-                        callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
+                    public void onError(String message) {
+                        callbackContext.error(message);
                     }
                 });
                 return true;
