@@ -66,6 +66,15 @@ register android activity at `platform/android/app/src/main/AndroidManifest.xml`
 
 ```
 
+update `ACCESS_KEY` and `SECRET_KEY` at `platform/android/app/src/main/java/com/face/liveness/FaceLiveness.java`. You can get your key at [here](https://cloud.nodeflux.io/)
+
+```java
+...
+intent.putExtra("ACCESS_KEY", "{ACCESS_KEY}");
+intent.putExtra("SECRET_KEY", "{SECRET_KEY}");
+...
+```
+
 add button to `www/index.html`
 
 ```html

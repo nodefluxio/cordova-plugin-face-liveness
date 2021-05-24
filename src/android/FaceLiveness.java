@@ -35,8 +35,8 @@ public class FaceLiveness extends CordovaPlugin {
         } else {
             if (action.equals("liveness")) {
                 Intent intent = new Intent(cordova.getActivity(), Liveness.class);
-                intent.putExtra("ACCESS_KEY", "ACCESS_KEY");
-                intent.putExtra("SECRET_KEY", "SECRET_KEY");
+                intent.putExtra("ACCESS_KEY", "{ACCESS_KEY}");
+                intent.putExtra("SECRET_KEY", "{SECRET_KEY}");
                 intent.putExtra("THRESHOLD", 0.7);
 
                 cordova.startActivityForResult(this, intent, 10);
